@@ -55,7 +55,7 @@ public class CreditCardFragmentActivity extends AppCompatActivity implements Act
     }
 
     @Override
-    public void onChangePage(CreditCardFragment.Step page) {
+    public void onChangedPage(CreditCardFragment.Step page) {
 
     }
 

@@ -24,8 +24,8 @@
        android:layout_width="match_parent"
        android:layout_height="match_parent"
        android:name="movile.com.creditcardguide.CreditCardFragment"
-       app:labelCardOwner="owner"
-       app:labelCardDateExp="valid thru"
+       app:labelOwner="@string/label_owner"
+       app:labelDateExp="@string/valid_thru"
        app:labelButtonPay="Confirm to pay"
        app:buttonPayBackground="@color/colorAccent"
        app:buttonPayTextColor="@color/white"/>

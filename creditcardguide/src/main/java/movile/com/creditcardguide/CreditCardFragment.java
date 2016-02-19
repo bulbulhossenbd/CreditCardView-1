@@ -517,7 +517,7 @@ public class CreditCardFragment extends Fragment implements TextWatcher, TextVie
 
     private void pageChanged() {
         if (actionOnPayListener != null) {
-            actionOnPayListener.onChangePage(lastStep);
+            actionOnPayListener.onChangedPage(lastStep);
         }
     }
 
