@@ -1,6 +1,9 @@
 # CreditCardView
 A real life simulation of a credit card for android.
-Watch: 
+
+Watch:
+
+[![WATCH](http://img.youtube.com/vi/6BsWDvnu1qA/0.jpg)](https://youtu.be/6BsWDvnu1qA "CreditCardView Android ")
 
 You can use just the representation of credit card with CreditCardView, or you can use the entire solution to collect user's credit card data with CreditCardFragment.
 
