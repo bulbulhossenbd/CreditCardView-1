@@ -115,8 +115,20 @@ public class CreditCardFragment extends Fragment implements TextWatcher, TextVie
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
-        actionOnPayListener = (ActionOnPayListener) activity;
 
+        if (activity instanceof ActionOnPayListener) {
+            actionOnPayListener = (ActionOnPayListener) activity;
+        }
+
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+
+        if (context instanceof ActionOnPayListener) {
+            actionOnPayListener = (ActionOnPayListener) context;
+        }
     }
 
     @Override
@@ -313,7 +325,9 @@ public class CreditCardFragment extends Fragment implements TextWatcher, TextVie
                         creditCardMethod.setInstallments(installments);
                         applyExpiredDate(creditCardMethod);
 
-                        actionOnPayListener.onComplete(creditCardMethod, switchSaveCard.isChecked());
+                        if (actionOnPayListener != null) {
+                            actionOnPayListener.onComplete(creditCardMethod, switchSaveCard.isChecked());
+                        }
                     } else {
                         //TODO: soft bug
                         Toast.makeText(getActivity(), R.string.invalid_credit_card_flag, Toast.LENGTH_LONG).show();
@@ -502,7 +516,9 @@ public class CreditCardFragment extends Fragment implements TextWatcher, TextVie
     }
 
     private void pageChanged() {
-        actionOnPayListener.onChangePage(lastStep);
+        if (actionOnPayListener != null) {
+            actionOnPayListener.onChangePage(lastStep);
+        }
     }
 
     private void checkColor(EditText edit) {

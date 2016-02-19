@@ -25,7 +25,7 @@
        android:layout_width="match_parent"
        android:layout_height="match_parent"
        app:labelOwner="@string/label_owner"
-       app:labelDateExp="valid thru">
+       app:labelDateExp="@string/valid_thru">
 
    </movile.com.creditcardguide.view.CreditCardView>
 

@@ -28,7 +28,6 @@
        app:labelCardDateExp="valid thru"
        app:labelButtonPay="Confirm to pay"
        app:buttonPayBackground="@color/colorAccent"
-       app:buttonPayTextColor="@color/white"
-       app:saveCard="false"/>
+       app:buttonPayTextColor="@color/white"/>
 
 </LinearLayout>

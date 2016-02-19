@@ -2,6 +2,7 @@
     <string name="app_name">CreditCardInput</string>
     <string name="action_settings">Settings</string>
     <string name="label_owner">owner</string>
+    <string name="valid_thru">valid thru</string>
 
 
 </resources>
