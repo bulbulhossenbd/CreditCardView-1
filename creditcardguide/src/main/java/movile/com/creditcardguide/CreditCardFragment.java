@@ -736,6 +736,10 @@ public class CreditCardFragment extends Fragment implements TextWatcher, TextVie
         }
     }
 
+    public void setListPurchaseOptions(List<PurchaseOption> optionList) {
+        setListPurchaseOptions(optionList, 0D);
+    }
+
     public void setListPurchaseOptions(List<PurchaseOption> optionList, Double totalValue) {
         this.purchaseOptions = optionList;
         FlagCardAdapter flagCardAdapter = new FlagCardAdapter(getActivity(), purchaseOptions);
@@ -747,12 +751,14 @@ public class CreditCardFragment extends Fragment implements TextWatcher, TextVie
             }
         });
 
-        if (totalValue != null) {
-            valueTotal = totalValue;
+        setTotalValue(totalValue);
+    }
 
-            txtValue.setText(String.format("%s %s", getString(R.string.currency),
-                    FormatUtils.getCurrencyFormat().format(valueTotal)));
-        }
+    public void setTotalValue(Double totalValue) {
+        valueTotal = totalValue;
+
+        txtValue.setText(String.format("%s %s", getString(R.string.currency),
+                FormatUtils.getCurrencyFormat().format(valueTotal)));
     }
 
     private void purchaseOptionSelected(PurchaseOption purchaseOption) {
