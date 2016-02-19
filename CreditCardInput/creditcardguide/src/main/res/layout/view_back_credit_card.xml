@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:mask="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/frg_input_card_back"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:visibility="gone"
+    android:paddingTop="10dp"
+    android:paddingLeft="24dp"
+    android:paddingRight="24dp">
+
+    <!--tools:showIn="@layout/fragment_input_credit_card"-->
+
+    <ImageView
+        android:id="@+id/view_back_card_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:src="@drawable/default_card_back" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="24dp">
+
+        <ImageView
+            android:id="@+id/view_back_card_image_sign"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sign_diners"/>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_gravity="right">
+
+                <movile.com.creditcardguide.view.FontFitTextView
+                    android:id="@+id/back_credit_card_txt_cvv"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="000"
+                    android:singleLine="true"
+                    android:maxLines="1"
+                    android:tag="o"
+                    android:background="@color/white"
+                    android:textColor="@color/gray_hard_text"
+                    android:textSize="16sp"
+                    mask:maxFontSize="16sp"/>
+
+            </LinearLayout>
+
+
+    </FrameLayout>
+
+</FrameLayout>

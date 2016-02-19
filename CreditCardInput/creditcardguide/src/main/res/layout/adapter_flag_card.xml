@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background_default">
+
+    <LinearLayout
+            android:layout_margin="16dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/adapter_flag_card_img_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/card_placeholder"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/adapter_flag_card_txt_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hint_credit_card_flag"
+            android:layout_marginLeft="16dp"
+            android:layout_gravity="center"
+            android:gravity="left"
+            android:paddingRight="20dp"
+            android:textColor="@color/gray_hard_text"
+            android:textSize="17sp"
+            android:singleLine="true"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:tag="r"/>
+
+    </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="16dp"
+            android:background="@color/gray_divider"
+            android:layout_marginBottom="1dp"/>
+
+</LinearLayout>

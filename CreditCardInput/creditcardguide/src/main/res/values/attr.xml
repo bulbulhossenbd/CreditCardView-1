@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="FontFitTextView">
+        <attr name="maxFontSize" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="MaskedEditText">
+        <attr name="mask" format="string" />
+        <attr name="char_representation" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="CreditCardFragment">
+        <attr name="labelCardOwner" format="string" />
+        <attr name="labelCardDateExp" format="string" />
+        <attr name="labelNumber" format="string" />
+        <attr name="labelExpireDate" format="string" />
+        <attr name="labelCVV" format="string" />
+        <attr name="labelOwnerName" format="string" />
+        <attr name="labelButtonPay" format="string" />
+        <attr name="labelTotal" format="string" />
+        <attr name="buttonPayBackground" format="integer" />
+        <attr name="buttonPayTextColor" format="color" />
+        <attr name="installments" format="boolean" />
+        <attr name="saveCard" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="CreditCardView">
+        <attr name="labelOwner" format="string" />
+        <attr name="labelDateExp" format="string" />
+    </declare-styleable>
+
+</resources>

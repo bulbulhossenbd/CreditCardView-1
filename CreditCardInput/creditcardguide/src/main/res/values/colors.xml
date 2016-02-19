@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="white">#ffffff</color>
+    <color name="gray_hard_text">#333333</color>
+    <color name="gray_hint">#bdbdbd</color>
+    <color name="background_default">@android:color/white</color>
+
+    <color name="gray_ligth_text">#aaaaaa</color>
+    <color name="gray_divider">#D6D6D6</color>
+
+    <color name="text_color_disabled">@color/gray_ligth_text</color>
+    <color name="edittext_color">@color/gray_hard_text</color>
+    <color name="line_edittext_color">@color/gray_divider</color>
+    <color name="label_info">@color/gray_hint</color>
+
+    <color name="button_color">#005890</color>
+    <color name="gray_middle">#919191</color>
+
+    <color name="button_color_pressed">#004b7a</color>
+
+    <color name="gray_background">#f5f5f5</color>
+    <color name="background_summary">@color/gray_background</color>
+
+    <color name="black">#000000</color>
+    <color name="green_button">#19BE38</color>
+
+    <color name="red_wrong">#D50000</color>
+
+</resources>
