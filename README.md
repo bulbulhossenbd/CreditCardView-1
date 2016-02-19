@@ -145,5 +145,5 @@ Please to clairy look the code of sample app.
 
 ### Copyright and license
 
-Code and documentation copyright 2011-2016 Felipe Silvestre.
-Code released under the [MIT license]().
+Code and documentation copyright 2016 Movile.
+Code released under the [MIT license](https://github.com/Movile/CreditCardView/blob/master/LICENSE.txt).
