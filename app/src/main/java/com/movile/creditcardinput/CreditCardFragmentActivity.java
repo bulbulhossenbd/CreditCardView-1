@@ -36,10 +36,6 @@ public class CreditCardFragmentActivity extends AppCompatActivity implements Act
                 CreditCardFragment.Step.EXPIRE_DATE, CreditCardFragment.Step.CVV, CreditCardFragment.Step.NAME);
 
         inputCardFragment.setListPurchaseOptions(getList(), 230.0);
-
-        CreditCardPaymentMethod cardPaymentMethod = new CreditCardPaymentMethod("5555 4444 3333 1111", "Felipe Morais", 12, 18, "342", IssuerCode.NUBANK, 2);
-        inputCardFragment.restoreSavedCard(cardPaymentMethod);
-        inputCardFragment.setLabelCVV("Security code");
     }
 
     private List<PurchaseOption> getList() {
