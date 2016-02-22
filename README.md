@@ -144,7 +144,7 @@ There are some attributes that you can provide configure the fragment/view:
 
 There are equivalent methods to set it on code.
 
-Please to clarify look the code of sample app.
+Please for further information look at the sample app code.
 
 ### Open source libraries
 CreditCardView uses the following open source files:
