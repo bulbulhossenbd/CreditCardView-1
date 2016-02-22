@@ -47,7 +47,7 @@ creditCardView.flipToBack(); // To show the back side
 creditCardView.flipToFront(); // To show the front side
 ```
 
-If you want configure the label texts of owner name and valid thru:
+If you want to configure the label texts of owner name and valid thru:
 
 ```xml
 <movile.com.creditcardguide.view.CreditCardView
@@ -84,7 +84,7 @@ inputCardFragment.setPagesOrder(CreditCardFragment.Step.FLAG, CreditCardFragment
 inputCardFragment.setListPurchaseOptions(getList(), 230.0);
 ```
 
-You must set the pages order and provide a purchase options list, for test you can create a fake list like the sample app:
+You must set the pages order and provide a purchase options list, to test you can create a fake list like the sample app:
 
 ```java
 private List<PurchaseOption> getStubList() {
@@ -104,7 +104,7 @@ private List<PurchaseOption> getStubList() {
     }
 ```
 
-And your activity needs implement ActionOnPayListener interface to listen:
+And your activity needs to implement ActionOnPayListener interface to listen:
 
 ```java
     @Override
@@ -118,7 +118,7 @@ And your activity needs implement ActionOnPayListener interface to listen:
     }
 ```
 
-There are some attributes that you can provide to make it flexible:
+There are some attributes that you can provide configure the fragment/view:
 
 ```xml
 <fragment
@@ -142,9 +142,9 @@ There are some attributes that you can provide to make it flexible:
        />
 ```
 
-There are methods to set it on code.
+There are equivalent methods to set it on code.
 
-Please to clairy look the code of sample app.
+Please to clarify look the code of sample app.
 
 ### Open source libraries
 CreditCardView uses the following open source files:
