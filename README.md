@@ -146,6 +146,10 @@ There are methods to set it on code.
 
 Please to clairy look the code of sample app.
 
+### Open source libraries
+CreditCardView uses the following open source files:
+* [MaskedEditText](https://github.com/toshikurauchi/MaskedEditText/) by [@Toshi Kurauchi](https://github.com/toshikurauchi) (MIT License)
+
 ### Copyright and license
 
 Code and documentation copyright 2016 Movile.
