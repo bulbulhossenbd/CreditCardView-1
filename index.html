@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Creditcardview by Movile</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <div class="inner">
+
+        <header>
+          <h1>Creditcardview</h1>
+          <h2></h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/Movile/CreditCardView/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/Movile/CreditCardView/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/Movile/CreditCardView" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <h1>
+<a id="creditcardview" class="anchor" href="#creditcardview" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>CreditCardView</h1>
+
+<p>A real life simulation of a credit card for android.</p>
+
+<p>Watch:</p>
+
+<p><a href="https://youtu.be/6BsWDvnu1qA" title="CreditCardView Android "><img src="http://img.youtube.com/vi/6BsWDvnu1qA/0.jpg" alt="WATCH"></a></p>
+
+<p>You can use just the representation of credit card with CreditCardView, or you can use the entire solution to collect user's credit card data with CreditCardFragment.</p>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>In your <code>build.gradle</code> file:</p>
+
+<div class="highlight highlight-source-groovy"><pre>dependencies {
+    compile <span class="pl-s"><span class="pl-pds">'</span>com.movile.creditcardview:creditcardview:1.0-beta<span class="pl-pds">'</span></span>
+}</pre></div>
+
+<h3>
+<a id="creditcardview-1" class="anchor" href="#creditcardview-1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>CreditCardView</h3>
+
+<p>In your layout xml:</p>
+
+<div class="highlight highlight-text-xml"><pre>&lt;<span class="pl-ent">movile</span>.com.creditcardguide.view.CreditCardView
+       <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>@+id/creditCardView<span class="pl-pds">"</span></span>
+       <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_width</span>=<span class="pl-s"><span class="pl-pds">"</span>match_parent<span class="pl-pds">"</span></span>
+       <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_height</span>=<span class="pl-s"><span class="pl-pds">"</span>match_parent<span class="pl-pds">"</span></span> /&gt;</pre></div>
+
+<p>In your activity/fragment class:</p>
+
+<div class="highlight highlight-source-java"><pre><span class="pl-k">final</span> <span class="pl-smi">CreditCardView</span> creditCardView <span class="pl-k">=</span> (<span class="pl-smi">CreditCardView</span>) findViewById(<span class="pl-smi">R</span><span class="pl-k">.</span>id<span class="pl-k">.</span>creditCardView);
+
+creditCardView<span class="pl-k">.</span>chooseFlag(<span class="pl-smi">IssuerCode</span><span class="pl-c1"><span class="pl-k">.</span>VISACREDITO</span>);
+creditCardView<span class="pl-k">.</span>setTextExpDate(<span class="pl-s"><span class="pl-pds">"</span>12/19<span class="pl-pds">"</span></span>);
+creditCardView<span class="pl-k">.</span>setTextNumber(<span class="pl-s"><span class="pl-pds">"</span>5555 4444 3333 1111<span class="pl-pds">"</span></span>);
+creditCardView<span class="pl-k">.</span>setTextOwner(<span class="pl-s"><span class="pl-pds">"</span>Felipe Silvestre<span class="pl-pds">"</span></span>);
+creditCardView<span class="pl-k">.</span>setTextCVV(<span class="pl-s"><span class="pl-pds">"</span>432<span class="pl-pds">"</span></span>);</pre></div>
+
+<p>To flip the card, you can call:</p>
+
+<div class="highlight highlight-source-java"><pre>creditCardView<span class="pl-k">.</span>flipToBack(); <span class="pl-c">// To show the back side</span>
+creditCardView<span class="pl-k">.</span>flipToFront(); <span class="pl-c">// To show the front side</span></pre></div>
+
+<p>If you want to configure the label texts of owner name and valid thru:</p>
+
+<div class="highlight highlight-text-xml"><pre>&lt;<span class="pl-ent">movile</span>.com.creditcardguide.view.CreditCardView
+       <span class="pl-e">xmlns</span><span class="pl-e">:</span><span class="pl-e">app</span>=<span class="pl-s"><span class="pl-pds">"</span>http://schemas.android.com/apk/res-auto<span class="pl-pds">"</span></span>
+       <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>@+id/creditCardView<span class="pl-pds">"</span></span>
+       <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_width</span>=<span class="pl-s"><span class="pl-pds">"</span>match_parent<span class="pl-pds">"</span></span>
+       <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_height</span>=<span class="pl-s"><span class="pl-pds">"</span>match_parent<span class="pl-pds">"</span></span>
+       <span class="pl-e">app</span><span class="pl-e">:</span><span class="pl-e">labelOwner</span>=<span class="pl-s"><span class="pl-pds">"</span>@string/label_owner<span class="pl-pds">"</span></span>
+       <span class="pl-e">app</span><span class="pl-e">:</span><span class="pl-e">labelDateExp</span>=<span class="pl-s"><span class="pl-pds">"</span>@string/valid_thru<span class="pl-pds">"</span></span>&gt;</pre></div>
+
+<h3>
+<a id="creditcardfragment" class="anchor" href="#creditcardfragment" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>CreditCardFragment</h3>
+
+<p>In your layout xml:</p>
+
+<div class="highlight highlight-text-xml"><pre>&lt;<span class="pl-ent">fragment</span>
+       <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>@+id/frgCreditCard<span class="pl-pds">"</span></span>
+       <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_width</span>=<span class="pl-s"><span class="pl-pds">"</span>match_parent<span class="pl-pds">"</span></span>
+       <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_height</span>=<span class="pl-s"><span class="pl-pds">"</span>match_parent<span class="pl-pds">"</span></span>
+       <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>movile.com.creditcardguide.CreditCardFragment<span class="pl-pds">"</span></span> /&gt;</pre></div>
+
+<p>In your activity class:</p>
+
+<div class="highlight highlight-source-java"><pre><span class="pl-smi">CreditCardFragment</span> inputCardFragment <span class="pl-k">=</span> (<span class="pl-smi">CreditCardFragment</span>) getFragmentManager()<span class="pl-k">.</span>findFragmentById(<span class="pl-smi">R</span><span class="pl-k">.</span>id<span class="pl-k">.</span>frgCreditCard);
+
+<span class="pl-c">// YOU MUST set the pages order (Set a order that makes sense to the user)</span>
+inputCardFragment<span class="pl-k">.</span>setPagesOrder(<span class="pl-smi">CreditCardFragment</span><span class="pl-k">.</span><span class="pl-smi">Step</span><span class="pl-c1"><span class="pl-k">.</span>FLAG</span>, <span class="pl-smi">CreditCardFragment</span><span class="pl-k">.</span><span class="pl-smi">Step</span><span class="pl-c1"><span class="pl-k">.</span>NUMBER</span>,
+        <span class="pl-smi">CreditCardFragment</span><span class="pl-k">.</span><span class="pl-smi">Step</span><span class="pl-c1"><span class="pl-k">.</span>EXPIRE_DATE</span>, <span class="pl-smi">CreditCardFragment</span><span class="pl-k">.</span><span class="pl-smi">Step</span><span class="pl-c1"><span class="pl-k">.</span>CVV</span>, <span class="pl-smi">CreditCardFragment</span><span class="pl-k">.</span><span class="pl-smi">Step</span><span class="pl-c1"><span class="pl-k">.</span>NAME</span>);
+
+<span class="pl-c">// YOU MUST provide a purchase options list</span>
+inputCardFragment<span class="pl-k">.</span>setListPurchaseOptions(getList(), <span class="pl-c1">230.0</span>);</pre></div>
+
+<p>You must set the pages order and provide a purchase options list, to test you can create a fake list like the sample app:</p>
+
+<div class="highlight highlight-source-java"><pre><span class="pl-k">private</span> <span class="pl-k">List&lt;<span class="pl-smi">PurchaseOption</span>&gt;</span> getStubList() {
+        <span class="pl-k">List&lt;<span class="pl-smi">PurchaseOption</span>&gt;</span> list <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-k">ArrayList&lt;&gt;</span>();
+        list<span class="pl-k">.</span>add(<span class="pl-k">new</span> <span class="pl-smi">PurchaseOption</span>(<span class="pl-smi">PaymentMethod</span><span class="pl-k">.</span><span class="pl-smi">Type</span><span class="pl-c1"><span class="pl-k">.</span>CREDIT_CARD</span>, <span class="pl-smi">IssuerCode</span><span class="pl-c1"><span class="pl-k">.</span>MASTERCARD</span>, <span class="pl-c1">6</span>));
+        list<span class="pl-k">.</span>add(<span class="pl-k">new</span> <span class="pl-smi">PurchaseOption</span>(<span class="pl-smi">PaymentMethod</span><span class="pl-k">.</span><span class="pl-smi">Type</span><span class="pl-c1"><span class="pl-k">.</span>CREDIT_CARD</span>, <span class="pl-smi">IssuerCode</span><span class="pl-c1"><span class="pl-k">.</span>VISACREDITO</span>, <span class="pl-c1">6</span>));
+        list<span class="pl-k">.</span>add(<span class="pl-k">new</span> <span class="pl-smi">PurchaseOption</span>(<span class="pl-smi">PaymentMethod</span><span class="pl-k">.</span><span class="pl-smi">Type</span><span class="pl-c1"><span class="pl-k">.</span>CREDIT_CARD</span>, <span class="pl-smi">IssuerCode</span><span class="pl-c1"><span class="pl-k">.</span>AMEX</span>, <span class="pl-c1">6</span>));
+        list<span class="pl-k">.</span>add(<span class="pl-k">new</span> <span class="pl-smi">PurchaseOption</span>(<span class="pl-smi">PaymentMethod</span><span class="pl-k">.</span><span class="pl-smi">Type</span><span class="pl-c1"><span class="pl-k">.</span>CREDIT_CARD</span>, <span class="pl-smi">IssuerCode</span><span class="pl-c1"><span class="pl-k">.</span>PAYPAL</span>, <span class="pl-c1">6</span>));
+        list<span class="pl-k">.</span>add(<span class="pl-k">new</span> <span class="pl-smi">PurchaseOption</span>(<span class="pl-smi">PaymentMethod</span><span class="pl-k">.</span><span class="pl-smi">Type</span><span class="pl-c1"><span class="pl-k">.</span>CREDIT_CARD</span>, <span class="pl-smi">IssuerCode</span><span class="pl-c1"><span class="pl-k">.</span>DINERS</span>, <span class="pl-c1">6</span>));
+        list<span class="pl-k">.</span>add(<span class="pl-k">new</span> <span class="pl-smi">PurchaseOption</span>(<span class="pl-smi">PaymentMethod</span><span class="pl-k">.</span><span class="pl-smi">Type</span><span class="pl-c1"><span class="pl-k">.</span>CREDIT_CARD</span>, <span class="pl-smi">IssuerCode</span><span class="pl-c1"><span class="pl-k">.</span>NUBANK</span>, <span class="pl-c1">6</span>));
+        list<span class="pl-k">.</span>add(<span class="pl-k">new</span> <span class="pl-smi">PurchaseOption</span>(<span class="pl-smi">PaymentMethod</span><span class="pl-k">.</span><span class="pl-smi">Type</span><span class="pl-c1"><span class="pl-k">.</span>CREDIT_CARD</span>, <span class="pl-smi">IssuerCode</span><span class="pl-c1"><span class="pl-k">.</span>AURA</span>, <span class="pl-c1">6</span>));
+        list<span class="pl-k">.</span>add(<span class="pl-k">new</span> <span class="pl-smi">PurchaseOption</span>(<span class="pl-smi">PaymentMethod</span><span class="pl-k">.</span><span class="pl-smi">Type</span><span class="pl-c1"><span class="pl-k">.</span>CREDIT_CARD</span>, <span class="pl-smi">IssuerCode</span><span class="pl-c1"><span class="pl-k">.</span>ELO</span>, <span class="pl-c1">6</span>));
+        list<span class="pl-k">.</span>add(<span class="pl-k">new</span> <span class="pl-smi">PurchaseOption</span>(<span class="pl-smi">PaymentMethod</span><span class="pl-k">.</span><span class="pl-smi">Type</span><span class="pl-c1"><span class="pl-k">.</span>CREDIT_CARD</span>, <span class="pl-smi">IssuerCode</span><span class="pl-c1"><span class="pl-k">.</span>HIPERCARD</span>, <span class="pl-c1">6</span>));
+        list<span class="pl-k">.</span>add(<span class="pl-k">new</span> <span class="pl-smi">PurchaseOption</span>(<span class="pl-smi">PaymentMethod</span><span class="pl-k">.</span><span class="pl-smi">Type</span><span class="pl-c1"><span class="pl-k">.</span>CREDIT_CARD</span>, <span class="pl-smi">IssuerCode</span><span class="pl-c1"><span class="pl-k">.</span>OTHER</span>, <span class="pl-c1">6</span>));
+
+        <span class="pl-k">return</span> list;
+    }</pre></div>
+
+<p>And your activity needs to implement ActionOnPayListener interface to listen:</p>
+
+<div class="highlight highlight-source-java"><pre>    @<span class="pl-smi">Override</span>
+    <span class="pl-k">public</span> <span class="pl-k">void</span> onChangedPage(<span class="pl-smi">CreditCardFragment</span><span class="pl-k">.</span><span class="pl-smi">Step</span> page) {
+
+    }
+
+    @<span class="pl-smi">Override</span>
+    <span class="pl-k">public</span> <span class="pl-k">void</span> onComplete(<span class="pl-smi">CreditCardPaymentMethod</span> purchaseOption, <span class="pl-k">boolean</span> saveCard) {
+        <span class="pl-smi">Toast</span><span class="pl-k">.</span>makeText(<span class="pl-v">this</span>, purchaseOption<span class="pl-k">.</span>toString(), <span class="pl-smi">Toast</span><span class="pl-c1"><span class="pl-k">.</span>LENGTH_LONG</span>)<span class="pl-k">.</span>show();
+    }</pre></div>
+
+<p>There are some attributes that you can provide configure the fragment/view:</p>
+
+<div class="highlight highlight-text-xml"><pre>&lt;<span class="pl-ent">fragment</span>
+       <span class="pl-e">xmlns</span><span class="pl-e">:</span><span class="pl-e">app</span>=<span class="pl-s"><span class="pl-pds">"</span>http://schemas.android.com/apk/res-auto<span class="pl-pds">"</span></span>
+       <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>@+id/frgCreditCard<span class="pl-pds">"</span></span>
+       <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_width</span>=<span class="pl-s"><span class="pl-pds">"</span>match_parent<span class="pl-pds">"</span></span>
+       <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">layout_height</span>=<span class="pl-s"><span class="pl-pds">"</span>match_parent<span class="pl-pds">"</span></span>
+       <span class="pl-e">android</span><span class="pl-e">:</span><span class="pl-e">name</span>=<span class="pl-s"><span class="pl-pds">"</span>movile.com.creditcardguide.CreditCardFragment<span class="pl-pds">"</span></span>
+       <span class="pl-e">app</span><span class="pl-e">:</span><span class="pl-e">labelCardOwner</span>=<span class="pl-s"><span class="pl-pds">"</span>string<span class="pl-pds">"</span></span>
+       <span class="pl-e">app</span><span class="pl-e">:</span><span class="pl-e">labelCardDateExp</span>=<span class="pl-s"><span class="pl-pds">"</span>string<span class="pl-pds">"</span></span>
+       <span class="pl-e">app</span><span class="pl-e">:</span><span class="pl-e">labelButtonPay</span>=<span class="pl-s"><span class="pl-pds">"</span>string<span class="pl-pds">"</span></span>
+       <span class="pl-e">app</span><span class="pl-e">:</span><span class="pl-e">buttonPayBackground</span>=<span class="pl-s"><span class="pl-pds">"</span>@color/color<span class="pl-pds">"</span></span>
+       <span class="pl-e">app</span><span class="pl-e">:</span><span class="pl-e">buttonPayTextColor</span>=<span class="pl-s"><span class="pl-pds">"</span>@color/color<span class="pl-pds">"</span></span>
+       <span class="pl-e">app</span><span class="pl-e">:</span><span class="pl-e">labelNumber</span>=<span class="pl-s"><span class="pl-pds">"</span>string<span class="pl-pds">"</span></span>
+       <span class="pl-e">app</span><span class="pl-e">:</span><span class="pl-e">labelExpireDate</span>=<span class="pl-s"><span class="pl-pds">"</span>string<span class="pl-pds">"</span></span>
+       <span class="pl-e">app</span><span class="pl-e">:</span><span class="pl-e">labelCVV</span>=<span class="pl-s"><span class="pl-pds">"</span>string<span class="pl-pds">"</span></span>
+       <span class="pl-e">app</span><span class="pl-e">:</span><span class="pl-e">labelOwnerName</span>=<span class="pl-s"><span class="pl-pds">"</span>string<span class="pl-pds">"</span></span>
+       <span class="pl-e">app</span><span class="pl-e">:</span><span class="pl-e">labelTotal</span>=<span class="pl-s"><span class="pl-pds">"</span>string<span class="pl-pds">"</span></span>
+       <span class="pl-e">app</span><span class="pl-e">:</span><span class="pl-e">installments</span>=<span class="pl-s"><span class="pl-pds">"</span>false|true<span class="pl-pds">"</span></span>
+       <span class="pl-e">app</span><span class="pl-e">:</span><span class="pl-e">saveCard</span>=<span class="pl-s"><span class="pl-pds">"</span>false|true<span class="pl-pds">"</span></span>
+       /&gt;</pre></div>
+
+<p>There are equivalent methods to set it on code.</p>
+
+<p>Please for further information look at the sample app code.</p>
+
+<h3>
+<a id="open-source-libraries" class="anchor" href="#open-source-libraries" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Open source libraries</h3>
+
+<p>CreditCardView uses the following open source files:</p>
+
+<ul>
+<li>
+<a href="https://github.com/toshikurauchi/MaskedEditText/">MaskedEditText</a> by <a href="https://github.com/toshikurauchi">@Toshi Kurauchi</a> (MIT License)</li>
+</ul>
+
+<h3>
+<a id="copyright-and-license" class="anchor" href="#copyright-and-license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Copyright and license</h3>
+
+<p>Code and documentation copyright 2016 Movile.
+Code released under the <a href="https://github.com/Movile/CreditCardView/blob/master/LICENSE.txt">MIT license</a>.</p>
+        </section>
+
+        <footer>
+          Creditcardview is maintained by <a href="https://github.com/Movile">Movile</a><br>
+          This page was generated by <a href="https://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
+</html>
