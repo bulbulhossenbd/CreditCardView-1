@@ -13,7 +13,7 @@ In your ``build.gradle`` file:
 
 ```groovy
 dependencies {
-    compile 'com.movile.creditcardview:creditcardview:1.0-beta'
+    compile 'com.movile:creditcardguide:1.2-beta'
 }
 ```
 
