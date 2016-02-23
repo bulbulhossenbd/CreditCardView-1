@@ -154,4 +154,5 @@ CreditCardView uses the following open source files:
 
 Code and documentation copyright 2016 Movile.
 Code released under the [MIT license](https://github.com/Movile/CreditCardView/blob/master/LICENSE.txt).
+
 Felipe Silvestre (Dev) & Victor Namba (Designer)
