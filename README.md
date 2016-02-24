@@ -7,10 +7,8 @@ A real life simulation of a credit card for android.
 
 ![screenshot 1](https://raw.githubusercontent.com/Movile/CreditCardView/master/screenshoots/screen1.png)
 ![screenshot 2](https://raw.githubusercontent.com/Movile/CreditCardView/master/screenshoots/screen2.png)
-![screenshot 3](https://raw.githubusercontent.com/Movile/CreditCardView/master/screenshoots/screen3.png)
-![screenshot 4](https://raw.githubusercontent.com/Movile/CreditCardView/master/screenshoots/screen4.png)
 
-Watch:
+###Watch:
 
 [![WATCH](https://raw.githubusercontent.com/Movile/CreditCardView/master/screenshoots/player.png)](https://youtu.be/3w5psz9nhoI "CreditCardView Android ")
 
