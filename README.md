@@ -4,8 +4,12 @@
 A real life simulation of a credit card for android.
 
 ### Screenshots:
-
+CreditCardView
 ![screenshot 1](https://raw.githubusercontent.com/Movile/CreditCardView/master/screenshoots/screen1.png)
+
+<br />
+<br />
+CreditCardFragment
 ![screenshot 2](https://raw.githubusercontent.com/Movile/CreditCardView/master/screenshoots/screen2.png)
 
 ###Watch:
