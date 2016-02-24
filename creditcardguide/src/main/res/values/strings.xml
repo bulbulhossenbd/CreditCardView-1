@@ -8,7 +8,7 @@
     <string name="elo">Elo</string>
     <string name="hipercard">Hipercard</string>
     <string name="redecardcredito">MasterCard</string>
-    <string name="visacredito">Visa Crédito</string>
+    <string name="visacredito">Visa</string>
     <string name="visaelectron">Visa Electron</string>
     <string name="other">Other</string>
 
@@ -20,7 +20,7 @@
     <string name="owner_name">Owner name</string>
     <string name="owner_card">OWNER NAME</string>
     <string name="expiration_date">VALID THRU</string>
-    <string name="portions">Portions</string>
+    <string name="portions">Installments</string>
     <string name="option_pay_using_other_card_chosen">You chose input another card</string>
     <string name="undo">Undo</string>
     <string name="hint_credit_expire_date">MM/YY</string>
