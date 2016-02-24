@@ -1,3 +1,5 @@
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-CreditCardView-green.svg?style=true)](https://android-arsenal.com/details/1/3191)
+
 # CreditCardView
 A real life simulation of a credit card for android.
 
