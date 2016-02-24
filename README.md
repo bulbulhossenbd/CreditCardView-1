@@ -9,11 +9,10 @@ A real life simulation of a credit card for android.
 ![screenshot 2](https://raw.githubusercontent.com/Movile/CreditCardView/master/screenshoots/screen2.png)
 ![screenshot 3](https://raw.githubusercontent.com/Movile/CreditCardView/master/screenshoots/screen3.png)
 ![screenshot 4](https://raw.githubusercontent.com/Movile/CreditCardView/master/screenshoots/screen4.png)
-![screenshot 5](https://raw.githubusercontent.com/Movile/CreditCardView/master/screenshoots/screen5.png)
 
 Watch:
 
-[![WATCH](http://img.youtube.com/vi/6BsWDvnu1qA/0.jpg)](https://youtu.be/3w5psz9nhoI "CreditCardView Android ")
+[![WATCH](https://raw.githubusercontent.com/Movile/CreditCardView/master/screenshoots/player.png)](https://youtu.be/3w5psz9nhoI "CreditCardView Android ")
 
 You can use just the representation of credit card with CreditCardView, or you can use the entire solution to collect user's credit card data with CreditCardFragment.
 
